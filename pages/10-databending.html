@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Databending — Creative Destruction</title>
+<meta name="description" content="The early-2000s moment when 'glitch art' became a name and a method — hex editing, broken JPEGs, and the willingness to open the wrong file in the wrong software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/glitch.css">
+</head>
+<body data-slug="10-databending">
+<main id="main" class="wrap">
+
+  <!-- ERA HEADER -->
+  <header class="era-head">
+    <p class="era-num">10</p>
+    <h1 class="era-h glitch" data-text="Databending">Databending</h1>
+    <p><span class="era-years">2000–2005</span></p>
+    <p class="lede"><strong>You don’t need a video synth or a CRT.</strong> You need a file and the willingness to fuck it up.</p>
+    <div class="era-tags">
+      <span class="tag">the name “glitch art”</span><span class="tag">hex editing</span><span class="tag">happy accidents</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="era-h">The moment glitch got a name</h2>
+    <p>For decades the error had been chased through expensive, room-sized hardware — magnets on a tube, scan processors, synths that cost more than a car. Then, in the early 2000s, the whole thing flipped. The error came home. By this point <strong>“glitch art” had hardened into a recognised visual term</strong>, a thing you could name and look for, not just a feeling you got when the machine misbehaved.</p>
+    <p>Iman Moradi wrote that he first met the phrase “glitch art” on Ant Scott’s Beflix weblog as early as 2001 — a blog, not a gallery, which tells you exactly where this culture was forming. Three years later Moradi’s 2004 research, <em>Glitch Aesthetics</em> (the dissertation also known as “Seeking Perfect Imperfection”), did the unglamorous, necessary work of formalising the field. Its most durable contribution is a distinction artists still argue about: the split between the found <strong>glitch</strong> — a genuine accident you caught and kept — and the deliberately manufactured <strong>glitch-alike</strong>, where you reproduce the look of failure on purpose. Once you have that vocabulary, you can talk about authorship, intent, and whether the machine or the artist made the image.</p>
+  </section>
+
+  <section>
+    <h3>Open the wrong file in the wrong software</h3>
+    <p>Databending is the method that defines the era. The recipe is brutally simple: take an image file, open it in a program that has no business opening it — a text editor, an audio editor, a hex editor — change the data, and watch the picture partially break. <em>Wired</em> describes it as purposefully introducing glitches into files, drawing the analogy directly to circuit bending: where the benders short-circuited toy keyboards, the databenders short-circuit file formats. Load a JPEG into Audacity as raw audio, apply an echo, export it back, and the codec tries to make sense of corrupted bytes — the result is tearing, smearing, blocks of displaced colour.</p>
+    <p>This is the era of hex editing, codec abuse, broken JPEGs, VJ glitch and corrupted video, cheap-camera sensor errors mined for texture, Flickr glitch groups swapping results, and a thick layer of tutorial culture teaching anyone who asked. The key shift is the one in the lede: <mark>glitch becomes accessible</mark>. No synth. No CRT. Just a file and the willingness to fuck it up — and, crucially, the patience to do it again when the file simply refuses to open at all.</p>
+  </section>
+
+  <div class="demo">
+    <div class="demo-head"><span class="dot"></span><span class="title">real byte corruption</span><span class="by">the HexGlitcher technique</span></div>
+    <div class="stage"><canvas data-glitch="databend" data-mode="sort"></canvas></div>
+    <div class="cap">Switch the operation (byte shift / noise / sort / repeat / reverse), dial the intensity, re-roll the seed, or drop your own image. This is the Audacity-on-an-image workflow, in the browser.</div>
+  </div>
+
+  <section>
+    <h3>The aesthetics that fell out of the method</h3>
+    <p>Once corruption is cheap, styles emerge. Pixel sorting — Kim Asendorf’s ASDF pixel sort from 2010 — belongs squarely in this databending family even though it arrives at the tail end of the lineage. Instead of scrambling bytes blindly, it reads the image and reorders contiguous runs of pixels by brightness, dragging the picture into long smeared ribbons. It looks like data damage but it’s actually data <em>obedience</em> taken to an absurd, beautiful extreme. It’s the moment the field realises the “glitch-alike” can be more controllable, more repeatable, and more designed than the accidents that inspired it.</p>
+  </section>
+
+  <div class="demo">
+    <div class="demo-head"><span class="dot"></span><span class="title">pixel sorting</span><span class="by">after Kim Asendorf</span></div>
+    <div class="stage"><canvas data-glitch="pixelSort"></canvas></div>
+    <div class="cap">Pick a brightness band; contiguous runs of pixels inside it get sorted, smearing the image into ribbons. Upload your own to sort.</div>
+  </div>
+
+  <section>
+    <h2 class="era-h">Who &amp; what to know</h2>
+    <div class="fig"><span class="yr">2001</span><span><span class="nm">Ant Scott (Beflix)</span> — <span class="what">the phrase “glitch art” appears on the blog.</span></span></div>
+    <div class="fig"><span class="yr">2004</span><span><span class="nm">Iman Moradi</span> — <span class="what">“Glitch Aesthetics” — formalising the field; glitch vs glitch-alike.</span></span></div>
+    <div class="fig"><span class="yr">2000s</span><span><span class="nm">databending</span> — <span class="what">hex/audio editors used to corrupt image files.</span></span></div>
+    <div class="fig"><span class="yr">2010</span><span><span class="nm">Kim Asendorf</span> — <span class="what">ASDF pixel sort — the sorting aesthetic.</span></span></div>
+  </section>
+
+  <section>
+    <h2 class="era-h">In this lineage: Willbear’s tools</h2>
+    <p class="dim">The technique above, built and shipped:</p>
+    <p>HexGlitcher is exactly this idea made into an instrument — a layered, realtime databender that separates byte ops from pixel ops and uses reproducible seeds, so a “happy accident” can be reproduced on demand. WRONG takes the same byte-level corruption and pushes it into a live browser, breaking files before the decoder ever sees them.</p>
+    <div data-works="10-databending"></div>
+  </section>
+
+  <section>
+    <h4>Go deeper</h4>
+    <ul class="links">
+      <li><span class="src">Moradi</span><a href="https://www.virose.pt/vector/x_06/moradi.html">Seeking Perfect Imperfection</a></li>
+      <li><span class="src">Wired</span><a href="https://www.wired.com/story/glitch-art-databending">Glitch art created by databending</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- pager auto-renders from body[data-slug]; footer auto-renders -->
+<footer data-auto></footer>
+
+<script src="../assets/works.js" defer></script>
+<script src="../assets/nav.js" defer></script>
+<script src="../assets/glitch.js" defer></script>
+</body>
+</html>

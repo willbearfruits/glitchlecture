@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datamoshing — Creative Destruction</title>
+<meta name="description" content="Datamoshing attacks video compression itself — removing keyframes so motion vectors bleed one shot into the next, turning the codec's memory into digital liquid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/glitch.css">
+</head>
+<body data-slug="11-datamosh">
+<main id="main" class="wrap">
+
+  <!-- ERA HEADER -->
+  <header class="era-head">
+    <p class="era-num">11</p>
+    <h1 class="era-h glitch" data-text="Datamoshing">Datamoshing</h1>
+    <p><span class="era-years">2005–2010</span></p>
+    <p class="lede"><strong>Earlier glitch broke the image.</strong> Datamosh breaks the prediction — it reaches past the pixels and into the logic the codec uses to guess what happens next.</p>
+    <div class="era-tags">
+      <span class="tag">compression</span><span class="tag">Takeshi Murata</span><span class="tag">pixel bleed</span>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="era-h">Attacking the codec, not the canvas</h2>
+    <p>Every previous chapter in this lecture damaged something you could point at — a signal, a file, a frame. Datamoshing aims somewhere stranger. It attacks <strong>video compression logic</strong>, specifically the relationship between two kinds of frame. A keyframe — the I-frame — is a whole, self-contained picture. A predicted frame — the P-frame — is not a picture at all. It is an instruction: take what was already on screen and move it. P-frames store motion vectors, little arrows that say "this block of pixels goes here now," because that is enormously cheaper than redrawing the world every thirtieth of a second.</p>
+    <p>So the codec is always guessing. It only draws the truth occasionally, at the keyframes, and spends the rest of its time predicting forward from memory. Datamoshing is the act of sabotaging that arrangement. Remove or duplicate the keyframes and the motion vectors keep firing into the wrong reference — they bleed across cuts, across scenes, across bodies. Movement that belonged to one shot gets applied to the still of another. Bodies melt. Colours smear and pool. One shot infects the next.</p>
+    <p>This is the crucial shift to land, and it is the reason datamoshing deserves its own chapter rather than being filed under databending. Earlier glitch said <em>the image breaks</em>. Datamosh says <em>the codec reveals its memory</em>. It is broken <strong>prediction</strong>, not broken pixels — you are not corrupting the picture, you are corrupting the machine's idea of what the picture is about to become.</p>
+  </section>
+
+  <div class="demo">
+    <div class="demo-head"><span class="dot"></span><span class="title">P-frame motion bleed</span><span class="by">the Datamosh GUI technique</span></div>
+    <div class="stage"><canvas data-glitch="datamosh"></canvas></div>
+    <div class="cap">Keyframes removed: each block pulls its pixels along the estimated motion vector, so movement smears one shot into the next. Hit "I-frame (reset)" to drop a fresh keyframe — or feed it your webcam.</div>
+  </div>
+
+  <section>
+    <h2 class="era-h">Monster Movie and digital liquid</h2>
+    <p>The canonical datamosh artwork is Takeshi Murata's <em>Monster Movie</em> (2005). Murata took compression and turned it into a substance. The Smithsonian describes the work as using datamoshing to render the video into "digital liquid," deliberately disrupting the video's own logic so that the footage dissolves and reconstitutes as flowing, boiling colour rather than discrete shots. It is not a video with an effect laid on top; it is a video coming apart along its own seams.</p>
+    <h3>Naming the aesthetic</h3>
+    <p>By the end of the decade the technique had a name and a lineage. Rhizome's <em>Pixel Bleed</em> (2009) identified Murata, alongside the video work of Paper Rad and Paul B. Davis, as early examples of artists manipulating digital compression to produce exactly this bleeding of pixels across frames. The phrase did real work: it separated this practice from generic "glitch" and pointed at the specific mechanism — the smear that happens when compression is asked to predict against the wrong past.</p>
+    <p>Tools followed the aesthetic. Sven König built software specifically for performing these manipulations, moving datamoshing out of accidental discovery and into a deliberate, repeatable craft. The technique later went pop, riding music videos — Chairlift's work and Kanye West's "Welcome to Heartbreak" pushed the melting-keyframe look in front of an audience that had never heard the words "motion vector" and never needed to.</p>
+  </section>
+
+  <section>
+    <h2 class="era-h">Who &amp; what to know</h2>
+    <div class="fig"><span class="yr">2005</span><span><span class="nm">Takeshi Murata</span> — <span class="what">Monster Movie — compression as "digital liquid".</span></span></div>
+    <div class="fig"><span class="yr">2006</span><span><span class="nm">Paper Rad / Paul B. Davis</span> — <span class="what">early pixel-bleed video works.</span></span></div>
+    <div class="fig"><span class="yr">2009</span><span><span class="nm">Rhizome</span> — <span class="what">"Pixel Bleed" — naming the compression aesthetic.</span></span></div>
+  </section>
+
+  <!-- YOUR-WORK auto-injection -->
+  <section>
+    <h2 class="era-h">In this lineage: Willbear's tools</h2>
+    <p class="dim">The technique above — keyframe and motion-vector control — built and shipped:</p>
+    <div data-works="11-datamosh"></div>
+  </section>
+
+  <section>
+    <h4>Go deeper</h4>
+    <ul class="links">
+      <li><span class="src">Smithsonian</span><a href="https://americanart.si.edu/artwork/monster-movie-86385">Takeshi Murata — Monster Movie</a></li>
+      <li><span class="src">Rhizome</span><a href="https://rhizome.org/editorial/2009/feb/25/pixel-bleed/">Pixel Bleed</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- pager auto-renders from body[data-slug]; footer auto-renders -->
+<footer data-auto></footer>
+
+<script src="../assets/works.js" defer></script>
+<script src="../assets/nav.js" defer></script>
+<script src="../assets/glitch.js" defer></script>
+</body>
+</html>

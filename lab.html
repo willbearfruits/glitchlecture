@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lab — Creative Destruction</title>
+<meta name="description" content="Every glitch technique in the lecture, in one place: magnet TV, oscilloscope, video feedback, real databending, datamoshing, pixel sort, ASCII, demoscene, AI melt and more. All interactive, all real.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/glitch.css">
+</head>
+<body data-slug="">
+<main id="main" class="wrap wide">
+
+  <header class="era-head" style="border-top:0">
+    <p class="era-num">THE LAB</p>
+    <h1 class="era-h glitch" data-text="Creative Destruction Lab">Creative Destruction Lab</h1>
+    <p class="lede"><strong>Every technique in the lecture, in one room.</strong> Nothing here is a GIF or a filter preset — each demo is a real implementation of the method it names. Drag, sort, mosh, corrupt. They pause when off-screen so the page stays fast.</p>
+    <p class="dim">Webcam + audio demos start on a button click and run locally (127.0.0.1 is a secure context). Many accept your own image. Each card links to the era it comes from.</p>
+  </header>
+
+  <div class="grid cols-2" style="align-items:start">
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">magnet TV</span><span class="by">§03 · Paik, 1965</span></div>
+      <div class="stage"><canvas data-glitch="crtMagnet"></canvas></div>
+      <div class="cap">Drag a magnetic field that warps and chroma-tears the picture, the way a real magnet bends an electron beam. <a href="pages/03-crt-magnet.html">→ the magnet on the CRT</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">oscillons</span><span class="by">§02 · Laposky, 1950s</span></div>
+      <div class="stage"><canvas data-glitch="oscilloscope"></canvas></div>
+      <div class="cap">Lissajous figures on a glowing phosphor — drawing with pure signal. <a href="pages/02-electronic.html">→ electronic images</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">video feedback</span><span class="by">§04 · the Vasulkas</span></div>
+      <div class="stage"><canvas data-glitch="videoFeedback"></canvas></div>
+      <div class="cap">The image eating itself in an infinite tunnel. Add zoom + rotation, or point your webcam at its own screen. <a href="pages/04-video-signal.html">→ video as signal</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">RGB shift</span><span class="by">§04 / §12 · channel split</span></div>
+      <div class="stage"><canvas data-glitch="rgbShift"></canvas></div>
+      <div class="cap">Chromatic channel separation + slice displacement. The everyday "glitch filter" — and the one Menkman warned would domesticate the form. <a href="pages/12-institution.html">→ domestication</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">real databending</span><span class="by">§10 · like HexGlitcher</span></div>
+      <div class="stage"><canvas data-glitch="databend" data-mode="shift"></canvas></div>
+      <div class="cap">Genuine JPEG byte corruption, decoded live. Switch operations, re-roll the seed, drop in your own image. <a href="pages/10-databending.html">→ databending</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">pixel sort</span><span class="by">§10 · Asendorf, 2010</span></div>
+      <div class="stage"><canvas data-glitch="pixelSort"></canvas></div>
+      <div class="cap">Contiguous runs of pixels inside a brightness band get sorted into smeared ribbons. Upload your own. <a href="pages/10-databending.html">→ databending</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">datamosh</span><span class="by">§11 · Murata, 2005</span></div>
+      <div class="stage"><canvas data-glitch="datamosh"></canvas></div>
+      <div class="cap">Keyframes removed: blocks pull pixels along their motion vectors so one shot bleeds into the next. Feed it your webcam. <a href="pages/11-datamosh.html">→ datamoshing</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">ASCII / character render</span><span class="by">§06 / §14 · characterglitch</span></div>
+      <div class="stage"><canvas data-glitch="ascii" data-ramp="blocks"></canvas></div>
+      <div class="cap">Pixels become Unicode glyphs. Swap glyph sets, change cell size, turn on the webcam. <a href="pages/06-homecomputers.html">→ bedrooms & demoscene</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">cracktro</span><span class="by">§06 · the demoscene</span></div>
+      <div class="stage"><canvas data-glitch="demoscene"></canvas></div>
+      <div class="cap">Plasma, copper bars, a starfield and a sine-wave scroller — the demoscene's show-off virtuosity. <a href="pages/06-homecomputers.html">→ demoscene</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">plotter / algorithmic</span><span class="by">§02 / §05 · Molnár</span></div>
+      <div class="stage"><canvas data-glitch="plotter"></canvas></div>
+      <div class="cap">Vera Molnár's "désordre": disorder rises down a pen-plotter grid as machine and chance share authorship. <a href="pages/05-systems.html">→ art + engineering</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">AI melt</span><span class="by">§15 · synthetic failure</span></div>
+      <div class="stage"><canvas data-glitch="aiMelt"></canvas></div>
+      <div class="cap">Latent-style flow-warp + posterise: the dreamy, doubling look of a model that lost the thread. Webcam optional. <a href="pages/15-aiglitch.html">→ AI glitch</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">net.art: a wrong page</span><span class="by">§08 · homage to JODI</span></div>
+      <div class="stage"><div data-glitch="jodi"></div></div>
+      <div class="cap">Move and click. Glyph-storms, rogue buttons and source debris — the browser as composed malfunction. <a href="pages/08-netart.html">→ net.art</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">glitch audio</span><span class="by">§09 · Oval / Cascone</span></div>
+      <div class="stage"><div data-glitch="glitchAudio" style="padding:18px"></div></div>
+      <div class="cap">Click play, then add bitcrush, speed-warps and random CD-skips. The aesthetics of failure, audible. <a href="pages/09-glitchmusic.html">→ glitch music</a></div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">zalgo text</span><span class="by">§00 / §01 · corruption</span></div>
+      <div class="stage"><div data-glitch="zalgo" data-text="creative destruction" style="padding:18px"></div></div>
+      <div class="cap">Combining-diacritic corruption rising over a phrase — the technique behind WRONG and characterglitch. <a href="pages/00-manifesto.html">→ the manifesto</a></div>
+    </div>
+
+  </div>
+
+  <section class="note kind" style="margin-top:48px">
+    <h4>these are the lecture's verbs</h4>
+    <p>Magnetise, feed back, corrupt, sort, mosh, sonify, hallucinate. Willbear ships full versions of several of these as real tools — <a href="https://willbearfruits.github.io/wrong/">WRONG</a>, HexGlitcher, Datamosh GUI, GlitchPedal. <a href="yourwork.html">See them on the Your Work page →</a></p>
+  </section>
+
+</main>
+<footer data-auto></footer>
+
+<script src="assets/works.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script src="assets/glitch.js" defer></script>
+</body>
+</html>

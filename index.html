@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREATIVE DESTRUCTION — a history of glitch art</title>
+<meta name="description" content="A living lecture on the history of glitch art — from the magnet on the CRT to synthetic AI failure. Every technique is also a working demo. By Willbear / Yaniv Schonfeld.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/glitch.css">
+</head>
+<body data-slug="">
+<main id="main">
+
+  <header class="hero wrap">
+    <p class="kicker">a history of glitch art · a living lecture</p>
+    <h1 class="glitch-title glitch" data-text="CREATIVE&#10;DESTRUCTION">CREATIVE<br>DESTRUCTION</h1>
+    <p class="lede">From a magnet pressed to a television in 1965 to the melting hands of a diffusion model — the story of artists who treat <b>noise, damage, system limits, malfunction, compression and broken interfaces</b> as their material.</p>
+    <p class="lede dim">Glitch art is not a style. It is a way of asking <em>what the machine is hiding.</em> Every section below is also a thing you can break with your hands. Scroll, drag, corrupt.</p>
+    <div class="spread" style="margin-top:28px">
+      <a class="btn" href="#timeline" style="border-color:var(--green);color:var(--green)">▸ enter the timeline</a>
+      <a class="btn" href="lab.html">the lab — all demos</a>
+      <a class="btn" href="yourwork.html">your own tools</a>
+    </div>
+  </header>
+
+  <!-- HERO DEMO: real JPEG databending -->
+  <section class="wrap">
+    <div class="demo">
+      <div class="demo-head"><span class="dot"></span><span class="title">live: real databending</span>
+        <span class="by">corruption injected at the byte level — like willbearfruits/hexglitcher</span></div>
+      <div class="stage"><canvas data-glitch="databend" data-mode="shift"></canvas></div>
+      <div class="cap">This isn't a filter. The image is encoded to JPEG, its raw bytes are corrupted, then the browser tries to decode the wreckage. Re-roll for happy accidents — or drop in your own image.</div>
+    </div>
+  </section>
+
+  <!-- THE CORE IDEA -->
+  <section class="wrap">
+    <h2 class="era-h">The core idea</h2>
+    <p><strong>Glitch art = when the failure of a medium becomes the artwork.</strong> Rosa Menkman defines a technological glitch as a short-lived break in the expected flow of a digital system, and glitch art as the aesthetic, conceptual or metaphorical use of such errors.</p>
+    <p>A clean image pretends the system is invisible. A glitched image exposes the system: the codec, the screen, the compression, the interface, the protocol, the file format, the platform, the algorithm, the ideology. The history isn't a single line — it's a family tree with many ancestors:</p>
+    <p class="dim" style="font-size:15px">damaged film → electronic image → video art → computer art → glitch music → net.art → databending → datamoshing → post-internet → AI / platform glitch.</p>
+
+    <div class="deck">
+      <div class="t"><div class="n">KIND 01</div><div class="h">Accidental</div><p style="font-size:14px">The machine fails by itself. A corrupted file, a broken signal, a crashed screen.</p></div>
+      <div class="t"><div class="n">KIND 02</div><div class="h">Induced</div><p style="font-size:14px">The artist forces the system to fail. Magnet on a CRT, databending, datamoshing, circuit bending.</p></div>
+      <div class="t"><div class="n">KIND 03</div><div class="h">Simulated</div><p style="font-size:14px">The artist imitates glitch visually. A filter, an overlay, a "cyberpunk glitch" preset. Less dangerous — unless it's conceptually sharp.</p></div>
+    </div>
+    <p class="dim">The strongest glitch art usually knows something about the structure of its medium. A datamosh knows codecs. A CRT bend knows electron beams. A JODI page knows HTML.</p>
+  </section>
+
+  <!-- THE TIMELINE (auto-rendered by nav.js) -->
+  <section class="wrap" id="timeline">
+    <h2 class="era-h">The timeline</h2>
+    <p class="dim">Seventeen stops, roughly 1910 to now. Each opens its own page with the history, canonical works, source links, and live demos you can wreck. <span style="color:var(--magenta)">▸ marks where Willbear's own tools sit inside the story.</span></p>
+    <div data-timeline></div>
+  </section>
+
+  <!-- HOW THIS WORKS -->
+  <section class="wrap">
+    <h2 class="era-h">How to read this</h2>
+    <div class="grid cols-3">
+      <div class="card"><h4>It's interactive</h4><p style="font-size:14px">Demos are real implementations, not GIFs. Drag the magnet, sort the pixels, mosh the webcam, corrupt the bytes. They pause when off-screen so the page stays fast.</p></div>
+      <div class="card"><h4>It's sourced</h4><p style="font-size:14px">Every section links to canonical works and writing — Tate, Rhizome, the Whitney, Menkman, Cascone — so you can go deeper than the lecture.</p></div>
+      <div class="card"><h4>It's lived-in</h4><p style="font-size:14px">The practice isn't only history. Willbear's own glitch tools — <a href="https://willbearfruits.github.io/wrong/">WRONG</a>, HexGlitcher, Datamosh GUI, GlitchPedal — appear inside the eras they belong to.</p></div>
+    </div>
+    <p style="margin-top:26px"><a class="btn" href="pages/00-manifesto.html" style="border-color:var(--green);color:var(--green)">▸ start: the manifesto</a></p>
+  </section>
+
+</main>
+<footer data-auto></footer>
+
+<script src="assets/works.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script src="assets/glitch.js" defer></script>
+</body>
+</html>

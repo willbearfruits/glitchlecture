@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python (serve.py)
+__pycache__/
+*.pyc
+
+# Throwaway smoke-test harnesses (see CLAUDE.md)
+*_smoke.html
